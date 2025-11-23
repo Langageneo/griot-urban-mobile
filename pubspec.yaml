@@ -1,0 +1,27 @@
+name: griot_urban_app
+description: App mobile pour Griot Urban Culture
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.5          # Appels API
+  flutter_svg: ^2.0.7    # Pour afficher ton SVG
+  cached_network_image: ^3.3.0  # Chargement optimisé des images
+  flutter_dotenv: ^5.1.0 # Pour gérer les variables d'environnement (comme .env)
+  webview_flutter: ^4.4.2 # Optionnel : pour afficher ton frontend Next.js en WebView
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.svg
+    - .env  # Fichier de config (comme ton .env backend)
