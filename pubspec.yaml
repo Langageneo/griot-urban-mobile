@@ -1,5 +1,7 @@
-name: griot_urban_app
-description: App mobile pour Griot Urban Culture
+name: griot_urban_mobile
+description: Application mobile pour Griot Urban Culture.
+
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -9,11 +11,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.5          # Appels API
-  flutter_svg: ^2.0.7    # Pour afficher ton SVG
-  cached_network_image: ^3.3.0  # Chargement optimisé des images
-  flutter_dotenv: ^5.1.0 # Pour gérer les variables d'environnement (comme .env)
-  webview_flutter: ^4.4.2 # Optionnel : pour afficher ton frontend Next.js en WebView
+  cupertino_icons: ^1.0.2
+  http: ^0.13.5
+  flutter_svg: ^2.0.7
+  cached_network_image: ^3.3.0
+  flutter_dotenv: ^5.1.0
+  intl: ^0.18.1
+  shared_preferences: ^2.2.2
+  connectivity_plus: ^5.0.2
+  flutter_spinkit: ^5.1.0
+  # ✅ Ajout pour les traductions
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -22,6 +31,19 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  # ✅ Tes assets existants (parfaits)
   assets:
     - assets/images/logo.svg
-    - .env  # Fichier de config (comme ton .env backend)
+    - assets/images/logo_animated.svg
+    - assets/images/placeholder.png
+    - assets/images/background.jpg
+    - assets/translations/
+    - .env  # ✅ Déjà présent dans ton fichier
+
+  # ✅ Tes fonts existantes (parfaites)
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/Urbanist-Bold.ttf
+          weight: 700
