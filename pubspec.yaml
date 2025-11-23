@@ -12,16 +12,17 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  http: ^0.13.5
-  flutter_svg: ^2.0.7
-  cached_network_image: ^3.3.0
-  flutter_dotenv: ^5.1.0
-  intl: ^0.18.1
-  shared_preferences: ^2.2.2
-  connectivity_plus: ^5.0.2
-  flutter_spinkit: ^5.1.0
-  # ✅ Ajout pour les traductions
-  flutter_localizations:
+  http: ^0.13.5               # Appels API
+  flutter_svg: ^2.0.7         # SVG (logo animé)
+  cached_network_image: ^3.3.0 # Images optimisées
+  flutter_dotenv: ^5.1.0      # Variables d'environnement
+  intl: ^0.18.1               # Internationalisation (dates, nombres)
+  shared_preferences: ^2.2.2  # Stockage local (token, préférences)
+  connectivity_plus: ^5.0.2   # Vérification de connexion
+  flutter_spinkit: ^5.1.0      # Animations de chargement
+  flutterwave: ^0.0.5          # Paiements (Flutterwave)
+  provider: ^6.0.5            # Gestion d'état (optionnel mais utile)
+  flutter_localizations:       # Traductions
     sdk: flutter
 
 dev_dependencies:
@@ -31,17 +32,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-  # ✅ Tes assets existants (parfaits)
   assets:
     - assets/images/logo.svg
     - assets/images/logo_animated.svg
     - assets/images/placeholder.png
     - assets/images/background.jpg
     - assets/translations/
-    - .env  # ✅ Déjà présent dans ton fichier
-
-  # ✅ Tes fonts existantes (parfaites)
+    - .env
   fonts:
     - family: Urbanist
       fonts:
