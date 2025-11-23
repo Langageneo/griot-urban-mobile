@@ -1,0 +1,6 @@
+flutter:
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/Urbanist-Bold.ttf
+          weight: 700
