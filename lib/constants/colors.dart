@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const primary = Color(0xFFFF6B35); // Orange (masque africain)
-  static const secondary = Color(0xFF4A90E2); // Bleu (halo)
-  static const background = Color(0xFFF5F5F5); // Fond clair
-  static const darkBackground = Color(0xFF121212); // Fond sombre
-  static const text = Color(0xFF333333); // Texte clair
-  static const darkText = Color(0xFFFFFFFF); // Texte sombre
-  static const error = Color(0xFFE74C3C); // Rouge erreur
-  static const success = Color(0xFF2ECC71); // Vert succès
+  // Couleurs principales
+  static const Color primary = Color(0xFF1A1A2E);
+  static const Color secondary = Color(0xFF4A90E2);
+  static const Color background = Color(0xFF0F0F1A);
+  static const Color text = Color(0xFFFFFFFF);
 
-  // Thème sombre/clair
-  static const lightTheme = {
-    'background': background,
-    'text': text,
-  };
-  static const darkTheme = {
-    'background': darkBackground,
-    'text': darkText,
-  };
+  // Couleurs des halos par catégorie
+  static const Color artistHalo = Color(0xFF4A90E2);      // Bleu électrique (artistes)
+  static const Color mediaHalo = Color(0xFFFF6B35);       // Orange (médias)
+  static const Color influenceurHalo = Color(0xFF2ECC71); // Vert (influenceurs)
+  static const Color premiumHalo = Color(0xFFFFD700);    // Or (Rap Ivoire)
+
+  // Dégradés pour les boutons
+  static const LinearGradient buttonGradient = LinearGradient(
+    colors: [Color(0xFF4A90E2), Color(0xFF1E3A8A)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+  // Couleurs pour les effets
+  static const Color haloGlow = Color(0xFF00F5FF);         // Effet glow bleu
+  static const Color error = Color(0xFFFF3333);
+  static const Color success = Color(0xFF2ECC71);
 }
